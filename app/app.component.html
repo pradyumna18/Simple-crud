@@ -1,0 +1,157 @@
+<div class="card">
+  <div class="card-header bg-info" style="height:50px">
+    <h6 style="text-align: center;margin-top: 5px;">Employee Registration</h6>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="employeeForm" (ngSubmit)="formSubmit()">
+      <div class="row">
+        <div class="form-group col">
+            <label >Department</label>
+            <select class="form-control"  name="department" formControlName="department">
+               <option value="Select Department">Select Department</option>
+               <option value="Account">Account</option>
+               <option value="Manager">Manager</option>
+               <option value="Administration">Administration</option>
+            </select>
+            <div class="text" *ngIf="!employeeForm.get('department')?.valid && employeeForm.get('department')?.touched">
+              First Select Department
+            </div>
+        </div>
+
+        <div class="form-group col">
+          <label >Employee Name</label>
+          <input type="text" class="form-control" name="empName" formControlName="empName">
+          <div class="text" *ngIf="!employeeForm.get('empName')?.valid && employeeForm.get('empName')?.touched">
+            First Add Employee Name
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <label >Mobile Number</label>
+          <input type="text" class="form-control" name="mob" formControlName="mob">
+          <div class="text" *ngIf="!employeeForm.get('mob')?.valid && employeeForm.get('mob')?.touched">
+            First Add Employee Mobile Number
+          </div>
+        </div>
+      </div>
+
+      <div class="row  mt-2">
+        <div class="form-group col" >
+            <label>Gender</label>
+            <select class="form-control" name="gen" formControlName="gen" >
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+           </select>
+           <div class="text" *ngIf="!employeeForm.get('gen')?.valid && employeeForm.get('gen')?.touched">
+            First Select Gender
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <label >Joining Date</label>
+          <input type="date" class="form-control" name="date" formControlName="date">
+          <div class="text" *ngIf="!employeeForm.get('date')?.valid && employeeForm.get('date')?.touched">
+            First Add Joining Date
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <label for="">Email</label>
+          <input type="email" class="form-control" name="email" formControlName="email">
+          <div class="text" *ngIf="!employeeForm.get('email')?.valid && employeeForm.get('email')?.touched">
+            First Add Employee Email ID
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row  mt-2">
+        <div class="form-group col">
+            <label >Salary</label>
+            <input type="number " class="form-control" name="salary" formControlName="salary">
+            <div class="text" *ngIf="!employeeForm.get('salary')?.valid && employeeForm.get('salary')?.touched">
+              First Add Employee Salary
+            </div>
+        </div>
+
+        <div class="form-group col">
+          <label >Password</label>
+          <input type="password" class="form-control" name="password" formControlName="password">
+          <div class="text" *ngIf="!employeeForm.get('password')?.valid && employeeForm.get('password')?.touched">
+            First Enter Password
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <label for="">Confirm Password</label>
+          <input type="password" class="form-control" name="pass" formControlName="pass">
+          <div class="text" *ngIf="!employeeForm.get('pass')?.valid && employeeForm.get('pass')?.touched">
+            Please Re-enter Password
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12">
+          <div class="form-group  form-ckeck">
+            <input type="checkbox" name="status" formControlName="status" >
+            <label>&nbsp;Active</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="form-group text-center">
+          <button type="submit" [class.disabled]="!employeeForm.valid" class="btn btn-success me-2">Save</button>
+          <button type="button" class="btn btn-warning me-2" (click)="reset()">Reset</button>
+          <button type="button"  class="btn btn-danger me-2" (click)="cancel()">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header bg-info text-center"><h6>Employee List</h6></div>
+  <div class="card-body">
+    <div class="row">
+      <table class="table table-bordered table-responsive table-striped">
+        <thead class="text-center">
+          <tr>
+            <th>Department</th>
+            <th>Employee Name</th>
+            <th>Mobile</th>
+            <th>Gender</th>
+            <th>Joining Date</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Password</th>
+            <th>Confirm Password</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr *ngFor="let item of users;i:index">
+            <td>{{item.department}}</td>
+            <td>{{item.empName}}</td>
+            <td>{{item.mob}}</td>
+            <td>{{item.gen}}</td>
+            <td>{{item.date}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.salary}}</td>
+            <td>{{item.password}}</td>
+            <td>{{item.pass}}</td>
+            <td>
+              <button id="btn1" class="btn btn-primary me-2">Edit</button>
+              <button id="btn2"class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br>
+<button class="admin" routerLink="admin">Admin Page</button>
+<router-outlet></router-outlet>

@@ -1,0 +1,133 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "department": "Account",
+      "empName": "Pradyumna",
+      "mob": "9021093921",
+      "gen": "Male",
+      "date": "2023-11-12",
+      "email": "prad18@gmail.com",
+      "salary": "25000",
+      "password": "prad123",
+      "pass": "prad123"
+    },
+    {
+      "department": "Manager",
+      "empName": "Taddy",
+      "mob": "8381032658",
+      "gen": "Male",
+      "date": "2023-12-12",
+      "email": "taddy@2000gmail.com",
+      "salary": "50000",
+      "password": "Taddy1234",
+      "pass": "Taddy1234",
+      "status": true,
+      "id": 2
+    },
+    {
+      "department": "Account",
+      "empName": "Nayan More",
+      "mob": "8381032658",
+      "gen": "Female",
+      "date": "2023-12-21",
+      "email": "nayan@123gmail.com",
+      "salary": "10000",
+      "password": "nayan",
+      "pass": "nayan",
+      "status": true,
+      "id": 3
+    },
+    {
+      "department": "Administration",
+      "empName": "Taddy",
+      "mob": "7776989185",
+      "gen": "Male",
+      "date": "2023-12-23",
+      "email": "pradyumnadesh7@gmail.com",
+      "salary": "50000",
+      "password": "taddy",
+      "pass": "taddy",
+      "status": true,
+      "id": 4
+    },
+    {
+      "department": "Account",
+      "empName": "Pradyumna",
+      "mob": "8381032658",
+      "gen": "Female",
+      "date": "2023-12-17",
+      "email": "taddy@2000gmail.com",
+      "salary": "500000",
+      "password": "wwww",
+      "pass": "wwww",
+      "status": true,
+      "id": 5
+    },
+    {
+      "department": "Manager",
+      "empName": "Pradyumna",
+      "mob": "9021093921",
+      "gen": "Male",
+      "date": "2024-01-11",
+      "email": "pradyumnadesh7@gmail.com",
+      "salary": "250000",
+      "password": "ssss",
+      "pass": "sss",
+      "status": true,
+      "id": 6
+    },
+    {
+      "department": "Account",
+      "empName": "Taddy",
+      "mob": "9021093921",
+      "gen": "Female",
+      "date": "2024-01-17",
+      "email": "deepak12@gmail.com",
+      "salary": "250000",
+      "password": "tttt",
+      "pass": "ttttt",
+      "status": true,
+      "id": 7
+    },
+    {
+      "department": "Account",
+      "empName": "Nayan More",
+      "mob": "7776989185",
+      "gen": "Female",
+      "date": "2024-01-21",
+      "email": "pradyumnadesh7@gmail.com",
+      "salary": "500000",
+      "password": "aaa",
+      "pass": "aaa",
+      "status": true,
+      "id": 8
+    },
+    {
+      "department": "Account",
+      "empName": "virat",
+      "mob": "9021093921",
+      "gen": "Male",
+      "date": "2024-01-09",
+      "email": "vk18@gmail.com",
+      "salary": "250000",
+      "password": "vk18",
+      "pass": "vk18",
+      "status": true,
+      "id": 9
+    },
+    {
+      "department": "Manager",
+      "empName": "sumit",
+      "mob": "8308301993",
+      "gen": "Male",
+      "date": "2024-01-24",
+      "email": "taddy@2000gmail.com",
+      "salary": "500000",
+      "password": "sw93",
+      "pass": "sw93",
+      "status": true,
+      "id": 10
+    }
+  ]
+}

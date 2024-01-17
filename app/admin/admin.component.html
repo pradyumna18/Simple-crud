@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header bg-info text-center"><h6>Employee List</h6></div>
+    <div class="card-body">
+      <div class="row">
+        <table class="table table-bordered table-responsive table-striped">
+          <thead class="text-center">
+            <tr>
+              <th>Department</th>
+              <th>Employee Name</th>
+              <th>Mobile</th>
+              <th>Gender</th>
+              <th>Joining Date</th>
+              <th>Email</th>
+              <th>Salary</th>
+              <th>Password</th>
+              <th>Confirm Password</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <tr *ngFor="let item of users;i:index">
+              <td>{{item.department}}</td>
+              <td>{{item.empName}}</td>
+              <td>{{item.mob}}</td>
+              <td>{{item.gen}}</td>
+              <td>{{item.date}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.salary}}</td>
+              <td>{{item.password}}</td>
+              <td>{{item.pass}}</td>
+              <td>
+                <button id="btn1" class="btn btn-primary me-2">Edit</button>
+                <button id="btn2"class="btn btn-danger">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
